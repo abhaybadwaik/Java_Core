@@ -8,13 +8,7 @@ import java.util.stream.Collectors;
 public class StreamExamples {
     public static void main(String[] args) {
         StreamExamples obj = new StreamExamples();
-//    obj.even();
-//    obj.greaterThan();
-//        obj.oddNumSum();
-//        obj.startsWith();
-//        obj.firstName3();
-//    obj.even();
-        obj.odd();
+
     }
 
     void even() {
@@ -68,4 +62,13 @@ public class StreamExamples {
                 .findFirst()
                 .ifPresent(System.out::println);
     }
+    void even() {
+        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        nums.stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * n)
+                .sorted()
+                .forEach(System.out::println);
+    }
+
 }
