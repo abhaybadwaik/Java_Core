@@ -90,6 +90,12 @@ public class StreamExamples {
                 .min(Comparator.comparingInt(String::length))
                 .ifPresent(System.out::println);
     }
+//    void duplicateElements(){
+//        List<Integer> elements = Arrays.asList(1,2,3,4,5,5,6,7);
+//        elements.stream()
+//                .filter(duplicateElements();)
+//    }
+
 
 
 }
