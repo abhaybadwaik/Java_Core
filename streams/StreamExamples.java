@@ -99,6 +99,7 @@ public class StreamExamples {
                 .filter(n -> !seen.add(n))      // add() returns false if element already exists
                 .distinct()                     // remove repeated duplicates
                 .collect(Collectors.toList());  // collect them into a list
+
         System.out.println("Duplicate elements: " + duplicates);
     }
 
