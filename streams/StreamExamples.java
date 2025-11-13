@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class StreamExamples {
     public static void main(String[] args) {
         StreamExamples obj = new StreamExamples();
-        obj.duplicateElements();
+        obj.duplicate();
     }
 
     void even() {
@@ -100,6 +100,15 @@ public class StreamExamples {
                 .distinct()                     // remove repeated duplicates
                 .collect(Collectors.toList());  // collect them into a list
         System.out.println("Duplicate elements: " + duplicates);
+    }
+    void duplicate(){
+        List<Integer> nums = Arrays.asList(1,2,2,3,4,4,5);
+        Map<Integer, Long> collect = nums.stream()
+                .collect(Collectors.groupingBy(i -> i, Collectors.counting()));
+        for (int i:collect.keySet())
+            if(collect.get(i).intValue()>1) {
+                System.out.println(collect.get(i));
+            }
     }
 
 
