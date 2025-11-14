@@ -11,7 +11,6 @@ public class StreamExamples {
         StreamExamples obj = new StreamExamples();
         obj.duplicate();
     }
-
     void even() {
         List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         nums.stream()
@@ -107,10 +106,8 @@ public class StreamExamples {
                 .collect(Collectors.groupingBy(i -> i, Collectors.counting()));
         for (int i:collect.keySet())
             if(collect.get(i).intValue()>1) {
+
                 System.out.println(collect.get(i));
             }
     }
-
-
-
 }
