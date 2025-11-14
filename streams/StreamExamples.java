@@ -106,7 +106,6 @@ public class StreamExamples {
                 .collect(Collectors.groupingBy(i -> i, Collectors.counting()));
         for (int i:collect.keySet())
             if(collect.get(i).intValue()>1) {
-
                 System.out.println(collect.get(i));
             }
     }
